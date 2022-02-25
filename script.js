@@ -1,3 +1,4 @@
+// Create Grid
 const container = document.getElementById("container");
 
 function makeRows(rows, cols) {
@@ -5,9 +6,17 @@ function makeRows(rows, cols) {
   container.style.setProperty('--grid-cols', cols);
   for (c = 0; c < (rows * cols); c++) {
     let cell = document.createElement("div");
-    cell.innerText = (c + 1);
     container.appendChild(cell).className = "grid-item";
   };
 };
+makeRows(10, 10);
 
-makeRows(6, 6);
+//Turn boxes black on hover
+const boxes = document.querySelectorAll("#container div");
+
+boxes.forEach((box) => {
+
+    box.addEventListener('mouseover', () => {
+      box.style.backgroundColor = "black";
+    });
+  });
