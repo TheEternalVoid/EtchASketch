@@ -20,3 +20,13 @@ boxes.forEach((box) => {
       box.style.backgroundColor = "black";
     });
   });
+
+
+//Create Clear button
+const clearButton = document.querySelector(".clearButton");
+
+clearButton.addEventListener('click', () => {
+    boxes.forEach((box) => {
+        box.style.backgroundColor = "white";
+    });
+});
