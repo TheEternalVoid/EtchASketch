@@ -1,27 +1,24 @@
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
-  }
+}
   
-  #container {
+#container {
     display: grid;
-    grid-gap: 1em;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
-  }
+    max-width: 50%;
+}
   
-  .grid-item {
-    padding: 1em;
+.grid-item {
+    padding: 25%;
     border: 1px solid #ddd;
     text-align: center;
-  }
 
-  .constraints {
-    max-width: 10px;
-    max-height: 10px;
+}
 
-  }
-  
-  .clearButton {
+
+.clearButton {
       margin: 40px 0px;
-  }
+}
+
